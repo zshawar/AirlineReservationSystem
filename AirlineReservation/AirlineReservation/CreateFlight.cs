@@ -51,5 +51,15 @@ namespace AirlineReservation
                 numericUpDown1.Value = 0;
             }
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            //show admin dashboard form
+            var AdminDash = new adminDash();
+            AdminDash.Show();
+
+            //close current form
+            this.Close();
+        }
     }
 }

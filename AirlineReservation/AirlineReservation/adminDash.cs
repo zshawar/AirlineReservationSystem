@@ -20,8 +20,17 @@ namespace AirlineReservation
 
         private void button1_Click(object sender, EventArgs e)
         {
+            //show create flight form
             var create = new CreateFlight();
             create.Show();
+            this.Close();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            //show view flights form
+            var view = new ViewFlights();
+            view.Show();
             this.Close();
         }
     }

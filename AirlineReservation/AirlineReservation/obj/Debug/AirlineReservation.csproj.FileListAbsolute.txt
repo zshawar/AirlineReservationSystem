@@ -24,3 +24,4 @@ C:\Users\zaina\Documents\INFO 3231\AirlineReservationSystem\AirlineReservation\A
 C:\Users\zaina\Documents\INFO 3231\AirlineReservationSystem\AirlineReservation\AirlineReservation\obj\Debug\AirlineReservation.pdb
 C:\Users\zaina\Documents\INFO 3231\AirlineReservationSystem\AirlineReservation\AirlineReservation\obj\Debug\AirlineReservation.adminDash.resources
 C:\Users\zaina\Documents\INFO 3231\AirlineReservationSystem\AirlineReservation\AirlineReservation\obj\Debug\AirlineReservation.CreateFlight.resources
+C:\Users\zaina\Documents\INFO 3231\AirlineReservationSystem\AirlineReservation\AirlineReservation\obj\Debug\AirlineReservation.ViewFlights.resources
