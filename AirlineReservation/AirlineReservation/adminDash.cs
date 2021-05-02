@@ -50,5 +50,13 @@ namespace AirlineReservation
             this.Close();
 
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            //show passenger list form 
+            var passenger = new FlightPassengers();
+            passenger.Show();
+            this.Close();
+        }
     }
 }

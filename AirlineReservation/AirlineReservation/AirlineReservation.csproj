@@ -64,6 +64,12 @@
     <Compile Include="FindFlights.Designer.cs">
       <DependentUpon>FindFlights.cs</DependentUpon>
     </Compile>
+    <Compile Include="FlightPassengers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FlightPassengers.Designer.cs">
+      <DependentUpon>FlightPassengers.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserAccounts.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,6 +110,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FindFlights.resx">
       <DependentUpon>FindFlights.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FlightPassengers.resx">
+      <DependentUpon>FlightPassengers.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>

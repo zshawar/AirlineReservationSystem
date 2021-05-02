@@ -15,6 +15,48 @@ namespace AirlineReservation
         public FlightPassengers()
         {
             InitializeComponent();
+
+            //setup datagrid columns
+            dataGridView1.ColumnCount = 3;
+            dataGridView1.Columns[0].Name = "Flight Number";
+            dataGridView1.Columns[1].Name = "Passenger";
+            dataGridView1.Columns[2].Name = "Email";
+            
+
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            //show admin dashboard form
+            var AdminDash = new adminDash();
+            AdminDash.Show();
+
+            //close current form
+            this.Close();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            dataGridView1.Rows.Clear();
+            FillData();
+        }
+
+        //fill data method
+        private void FillData()
+        {
+            //loop through each flight in the list
+            foreach (Flights created in Program.flight)
+            {
+                //loop through each passenger for each flight
+                foreach (User passenger in created.myPassengers)
+                {
+                    //add flight number, passenger username, and passenger email to data
+                    string[] row = { created.FlightNumber, passenger.Name, passenger.Email };
+                    dataGridView1.Rows.Add(row);
+                }
+                
+            }
         }
     }
 }
