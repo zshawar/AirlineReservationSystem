@@ -15,6 +15,15 @@ namespace AirlineReservation
         public UserDash()
         {
             InitializeComponent();
+            label1.Text += " " + Program.currentUser.Name + "!";
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            //show find flights form
+            var findFlights = new FindFlights();
+            findFlights.Show();
+            this.Close();
         }
     }
 }
