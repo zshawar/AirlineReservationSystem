@@ -13,8 +13,11 @@ namespace AirlineReservation
 
     static class Program
     {
+        //gives access to these lists to all forms so data can be added and stored
+        //serves as database
         public static List<User> users = new List<User>();
         public static List<Flights> flight = new List<Flights>();
+        public static User currentUser = new User("", "", "", false);
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
@@ -38,20 +41,23 @@ namespace AirlineReservation
         { get; set; }
         public string Email
         { get; set; }
+        public bool Admin
+        { get; set; }
 
         //use to store flights has to match flight class with user if you add to one class add to other class
         public List<Flights> myFlight
             { get; set; }
         /*Program.users[0].myFlight.Add(new Flights("a","a","a"));*/
         // add already existing flight not ^
-        /*public ArrayList listOfFlgihts = new ArrayList();*/
+        
 
 
-        public User(string username, string pass, string email)
+        public User(string username, string pass, string email, bool admin)
         {
             this.Name = username;
             this.Password = pass;
-            Email = email;
+            this.Email = email;
+            this.Admin = admin;
             myFlight = new List<Flights>();
         }
 
@@ -60,22 +66,36 @@ namespace AirlineReservation
 
     public class Flights
     {
-        public string flightName
+        //create variables to be stored in the flight
+        public string FlightNumber
         { get; set; }
-        public string Password
+        public string From
         { get; set; }
-        public string Email
+        public string Destination
+        { get; set; }
+        public string Price
+        { get; set; }
+        public string Time
+        { get; set; }
+        public int Capacity
         { get; set; }
         //use to store passengers for the flight
-        List<User> myUsers = new List<User>();
+        public List<User> myPassengers
+        { get; set; }
+       
+        
 
         /*Program.users[0].myUsers.Add(Bob);*/
-        public Flights(string username, string pass, string email)
+        public Flights(string flightNumber, string from, string destination, string price, string time, int capacity)
         {
-            this.flightName = username;
-            this.Password = pass;
-            Email = email;
-          
+            this.FlightNumber = flightNumber;
+            this.From = from;
+            this.Destination = destination;
+            this.Price = price;
+            this.Time = time;
+            this.Capacity = capacity;
+            myPassengers = new List<User>();
+
         }
     }
 

@@ -46,6 +46,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="adminDash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="adminDash.Designer.cs">
+      <DependentUpon>adminDash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CreateFlight.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateFlight.Designer.cs">
+      <DependentUpon>CreateFlight.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserDash.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -66,6 +78,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="adminDash.resx">
+      <DependentUpon>adminDash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CreateFlight.resx">
+      <DependentUpon>CreateFlight.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>

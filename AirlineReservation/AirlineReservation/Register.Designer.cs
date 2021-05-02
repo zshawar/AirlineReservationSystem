@@ -39,6 +39,7 @@ namespace AirlineReservation
             this.emailBox = new System.Windows.Forms.TextBox();
             this.registerButton = new System.Windows.Forms.Button();
             this.regError = new System.Windows.Forms.Label();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -138,12 +139,25 @@ namespace AirlineReservation
             this.regError.Size = new System.Drawing.Size(0, 29);
             this.regError.TabIndex = 9;
             // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.checkBox1.Location = new System.Drawing.Point(575, 330);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(107, 33);
+            this.checkBox1.TabIndex = 10;
+            this.checkBox1.Text = "Admin";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
             // Register
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Navy;
             this.ClientSize = new System.Drawing.Size(1200, 692);
+            this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.regError);
             this.Controls.Add(this.registerButton);
             this.Controls.Add(this.email);
@@ -173,6 +187,7 @@ namespace AirlineReservation
         private System.Windows.Forms.TextBox emailBox;
         private System.Windows.Forms.Button registerButton;
         private System.Windows.Forms.Label regError;
+        private System.Windows.Forms.CheckBox checkBox1;
     }
 }
 

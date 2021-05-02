@@ -10,3 +10,17 @@ C:\Users\zaina\Documents\INFO 3231\AirlineReservation\AirlineReservation\obj\Deb
 C:\Users\zaina\Documents\INFO 3231\AirlineReservation\AirlineReservation\obj\Debug\AirlineReservation.pdb
 C:\Users\zaina\Documents\INFO 3231\AirlineReservation\AirlineReservation\obj\Debug\AirlineReservation.Login.resources
 C:\Users\zaina\Documents\INFO 3231\AirlineReservation\AirlineReservation\obj\Debug\AirlineReservation.UserDash.resources
+C:\Users\zaina\Documents\INFO 3231\AirlineReservationSystem\AirlineReservation\AirlineReservation\bin\Debug\AirlineReservation.exe.config
+C:\Users\zaina\Documents\INFO 3231\AirlineReservationSystem\AirlineReservation\AirlineReservation\bin\Debug\AirlineReservation.exe
+C:\Users\zaina\Documents\INFO 3231\AirlineReservationSystem\AirlineReservation\AirlineReservation\bin\Debug\AirlineReservation.pdb
+C:\Users\zaina\Documents\INFO 3231\AirlineReservationSystem\AirlineReservation\AirlineReservation\obj\Debug\AirlineReservation.csprojAssemblyReference.cache
+C:\Users\zaina\Documents\INFO 3231\AirlineReservationSystem\AirlineReservation\AirlineReservation\obj\Debug\AirlineReservation.Login.resources
+C:\Users\zaina\Documents\INFO 3231\AirlineReservationSystem\AirlineReservation\AirlineReservation\obj\Debug\AirlineReservation.Properties.Resources.resources
+C:\Users\zaina\Documents\INFO 3231\AirlineReservationSystem\AirlineReservation\AirlineReservation\obj\Debug\AirlineReservation.Register.resources
+C:\Users\zaina\Documents\INFO 3231\AirlineReservationSystem\AirlineReservation\AirlineReservation\obj\Debug\AirlineReservation.UserDash.resources
+C:\Users\zaina\Documents\INFO 3231\AirlineReservationSystem\AirlineReservation\AirlineReservation\obj\Debug\AirlineReservation.csproj.GenerateResource.cache
+C:\Users\zaina\Documents\INFO 3231\AirlineReservationSystem\AirlineReservation\AirlineReservation\obj\Debug\AirlineReservation.csproj.CoreCompileInputs.cache
+C:\Users\zaina\Documents\INFO 3231\AirlineReservationSystem\AirlineReservation\AirlineReservation\obj\Debug\AirlineReservation.exe
+C:\Users\zaina\Documents\INFO 3231\AirlineReservationSystem\AirlineReservation\AirlineReservation\obj\Debug\AirlineReservation.pdb
+C:\Users\zaina\Documents\INFO 3231\AirlineReservationSystem\AirlineReservation\AirlineReservation\obj\Debug\AirlineReservation.adminDash.resources
+C:\Users\zaina\Documents\INFO 3231\AirlineReservationSystem\AirlineReservation\AirlineReservation\obj\Debug\AirlineReservation.CreateFlight.resources

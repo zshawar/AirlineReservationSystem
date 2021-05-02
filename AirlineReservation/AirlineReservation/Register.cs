@@ -28,26 +28,27 @@ namespace AirlineReservation
 
         public void registerButton_Click(object sender, EventArgs e)
         {
-            //create variables to store usernames, passwords
+            //create variables to store usernames, passwords, emails, and admin
             string username;
             string pass;
             string email;
+            bool isAdmin;
 
             //Get user input
             username = userName.Text;
             pass = password.Text;
             email = emailBox.Text;
+            isAdmin = checkBox1.Checked;
             if (username == "" || pass=="" || email=="")
             {
                 regError.Text = "Please fill out all fields";
             }
             else
             {
-                //Create user object to add to list
-                /*User one = new User(username, pass, email);*/
+                
 
-                //create array lists
-                Program.users.Add(new User(username, pass, email));
+                //add registered user to list
+                Program.users.Add(new User(username, pass, email, isAdmin));
                 /*label1.Text = Program.users[0].Name;*/
                 //show login form
                 /*Login login = new Login();

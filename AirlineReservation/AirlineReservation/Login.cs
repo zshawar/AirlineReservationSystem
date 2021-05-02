@@ -32,66 +32,49 @@ namespace AirlineReservation
         private void loginButton_Click(object sender, EventArgs e)
         {
             
-            //reset labels to empty
+            //reset labels used for incorrect input to empty
             incorrectUser.Text = "";
             incorrectPass.Text = "";
-            //call method
+
+            //create boolean that will store what the method returns
             bool[] auth = new bool [2];
+
+            //call method that checks if user is registered
             auth = checkUser();
-            /*Boolean user;
-            Boolean userPass;
             
-            //Get user input
-            user = false;
-            userPass = false;*/
-
-            //Check that username and password match username and password from registration
-            /*for(int i = 0; i <= Program.users.Count-1; i++)
-            {
-                if (Program.users[i].Name.Equals(userName.Text) && Program.users[i].Password.Equals(password.Text))
-                {
-                    user = true;
-                    userPass = true;
-                    break;
-                }
-                //these statements caused login problem comment out please
-                else if (Program.users[i].Name.Equals(userName.Text) && !(Program.users[i].Password.Equals(password.Text)))
-                {
-                    user = true;
-                    userPass = false;
-                }
-                else if (!(Program.users[i].Name.Equals(userName.Text)) && Program.users[i].Password.Equals(password.Text))
-                {
-                    user = false;
-                    userPass = true;
-                }
-                else
-                {
-                    user = false;
-                    userPass = false;
-                }
-
-            }*/
-
-            label1.Text = Program.users[0].Name;
 
             //if one is incorrect then they need to enter correct credentials
+            //checks boolean values to see if username or password is valid
             if (auth[0] != true || auth[1] != true)
             {
+                //if username is incorrect
                 if (auth[0] != true)
                 {
                     incorrectUser.Text = "Incorrect Username";
                 }
+                //if password is incorrect
                 if (auth[1] != true)
                 {
                     incorrectPass.Text = "Incorrect Password";
                 }
             }
+            //if both are correct send user to corresponding dashboard
             if (auth[0] == true && auth[1] == true)
             {
-                //show user dashboard form
-                var UserDash = new UserDash();
-                UserDash.Show();
+                //check if user is admin or regular user
+                if (Program.currentUser.Admin == true)
+                {
+                    //show admin dashboard form
+                    var AdminDash = new adminDash();
+                    AdminDash.Show();
+                }
+                else
+                {
+                    //show user dashboard form
+                    var UserDash = new UserDash();
+                    UserDash.Show();
+                }   
+                
             }
 
             
@@ -106,21 +89,28 @@ namespace AirlineReservation
             {
                 if (Program.users[i].Name.Equals(userName.Text) && Program.users[i].Password.Equals(password.Text))
                 {
-                    return new bool[] { true, true };
+                    //set the current user to this valid logged in user
+                    Program.currentUser = (Program.users[i]);
+                    //return true for valid username and true for valid password
+                    return new bool[] { true, true }; 
 
                 }
-                //these statements caused login problem comment out please
+                //checks if username was valid and password was not
                 else if (Program.users[i].Name.Equals(userName.Text) && !(Program.users[i].Password.Equals(password.Text)))
                 {
+                    //return true for valid username and false for valid password
                     return new bool[] { true, false };
                 }
+                //checks if password was valid and username was not
                 else if (!(Program.users[i].Name.Equals(userName.Text)) && Program.users[i].Password.Equals(password.Text))
                 {
+                    //returns false for username and true for valid password
                     return new bool[] { false, true };
                 }
                 
 
             }
+            //otherwise it was nothing was correct and return false for both
             return new bool[] { false, false };
 
         }
