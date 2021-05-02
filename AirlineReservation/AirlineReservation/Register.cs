@@ -41,6 +41,7 @@ namespace AirlineReservation
             isAdmin = checkBox1.Checked;
             if (username == "" || pass=="" || email=="")
             {
+                regError.ForeColor = Color.Red;
                 regError.Text = "Please fill out all fields";
             }
             else
@@ -49,13 +50,15 @@ namespace AirlineReservation
 
                 //add registered user to list
                 Program.users.Add(new User(username, pass, email, isAdmin));
-                /*label1.Text = Program.users[0].Name;*/
-                //show login form
-                /*Login login = new Login();
-                login.SetAllPeople(Program.users);
-                login.Show();*/
-                var Login = new Login();
-                Login.Show();
+
+                //Show success message and clear results
+                regError.ForeColor = Color.Green;
+                regError.Text = "Success!";
+                userName.Text = "";
+                password.Text = "";
+                emailBox.Text = "";
+                checkBox1.Checked = false;
+
             }
 
            
@@ -65,7 +68,11 @@ namespace AirlineReservation
 
         }
 
-        
+        private void button1_Click(object sender, EventArgs e)
+        {
+            var Login = new Login();
+            Login.Show();
+        }
     }
 
     

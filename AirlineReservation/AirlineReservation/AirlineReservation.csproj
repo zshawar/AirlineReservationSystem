@@ -58,6 +58,12 @@
     <Compile Include="CreateFlight.Designer.cs">
       <DependentUpon>CreateFlight.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserAccounts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserAccounts.Designer.cs">
+      <DependentUpon>UserAccounts.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserDash.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,6 +110,9 @@
     </Compile>
     <EmbeddedResource Include="Register.resx">
       <DependentUpon>Register.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserAccounts.resx">
+      <DependentUpon>UserAccounts.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserDash.resx">
       <DependentUpon>UserDash.cs</DependentUpon>

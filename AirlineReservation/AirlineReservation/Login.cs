@@ -73,7 +73,10 @@ namespace AirlineReservation
                     //show user dashboard form
                     var UserDash = new UserDash();
                     UserDash.Show();
-                }   
+                }
+
+                //close login page
+                this.Close();
                 
             }
 
