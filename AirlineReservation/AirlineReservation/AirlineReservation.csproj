@@ -58,6 +58,12 @@
     <Compile Include="CreateFlight.Designer.cs">
       <DependentUpon>CreateFlight.cs</DependentUpon>
     </Compile>
+    <Compile Include="Feedback.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Feedback.Designer.cs">
+      <DependentUpon>Feedback.cs</DependentUpon>
+    </Compile>
     <Compile Include="FindFlights.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -69,6 +75,12 @@
     </Compile>
     <Compile Include="FlightPassengers.Designer.cs">
       <DependentUpon>FlightPassengers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyFlights.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyFlights.Designer.cs">
+      <DependentUpon>MyFlights.cs</DependentUpon>
     </Compile>
     <Compile Include="UserAccounts.cs">
       <SubType>Form</SubType>
@@ -116,6 +128,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyFlights.resx">
+      <DependentUpon>MyFlights.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

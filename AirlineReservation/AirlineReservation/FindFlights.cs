@@ -37,6 +37,7 @@ namespace AirlineReservation
 
         }
 
+        //takes you to user dashboard
         private void button2_Click(object sender, EventArgs e)
         {
             //show user dashboard
@@ -55,29 +56,60 @@ namespace AirlineReservation
             }
         }
 
+        //refreshs table
         private void button1_Click(object sender, EventArgs e)
         {
             dataGridView1.Rows.Clear();
             FillData();
         }
 
-        //if a button is clicked
+        //if add button is clicked
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             //Check what was clicked
-            //find what row index
-            int index = dataGridView1.CurrentCell.RowIndex;
+            //check to make sure the correct column was selected
+            int col = dataGridView1.CurrentCell.ColumnIndex;
 
-            //adjust capacity
-            Program.flight[index].Capacity -= 1;
+            //if its the correct column then check the capacity
+            if (col == 6)
+            {
+                //find what row index
+                int index = dataGridView1.CurrentCell.RowIndex;
 
-            //add flight to current user
-            Program.currentUser.myFlight.Add(Program.flight[index]);
+                //check capacity - if no seats are available
+                if (Program.flight[index].Capacity == 0)
+                {
+                    //Tell user the ticket cannot be added check for seats later
+                    label1.ForeColor = Color.Red;
+                    label1.Text = "Ticket for " + Program.flight[index].FlightNumber + " cannot be added. Check for seats later.";
+                }
+                //there are still seats available
+                else
+                {
+                    //adjust capacity
+                    Program.flight[index].Capacity -= 1;
 
-            //add current user to flight
-            Program.flight[index].myPassengers.Add(Program.currentUser);
+                    //add flight to current user in user array list
+                    int userIndex = Program.users.IndexOf(Program.currentUser);
+                    Program.users[userIndex].myFlight.Add(Program.flight[index]);
+                    //Program.currentUser.myFlight.Add(Program.flight[index]);
 
-            label1.Text = "Ticket for " + Program.flight[index].FlightNumber + "was added!";
+                    //add current user to flight
+                    Program.flight[index].myPassengers.Add(Program.currentUser);
+
+                    //Tell user the ticket was added
+                    label1.ForeColor = Color.Green;
+                    label1.Text = "Ticket for " + Program.flight[index].FlightNumber + " was added!";
+
+                    //Update the table so capacity changes
+                    dataGridView1.Rows.Clear();
+                    FillData();
+                }
+                
+            }
+            
         }
+
+        
     }
 }

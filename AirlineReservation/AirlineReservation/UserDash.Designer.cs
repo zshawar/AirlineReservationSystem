@@ -95,7 +95,7 @@ namespace AirlineReservation
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(242, 49);
             this.button3.TabIndex = 13;
-            this.button3.Text = "User Accounts";
+            this.button3.Text = "Feedback";
             this.button3.UseVisualStyleBackColor = false;
             // 
             // button2
@@ -109,6 +109,7 @@ namespace AirlineReservation
             this.button2.TabIndex = 12;
             this.button2.Text = "My Flgihts";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 

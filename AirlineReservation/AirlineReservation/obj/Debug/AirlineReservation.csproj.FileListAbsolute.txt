@@ -28,3 +28,4 @@ C:\Users\zaina\Documents\INFO 3231\AirlineReservationSystem\AirlineReservation\A
 C:\Users\zaina\Documents\INFO 3231\AirlineReservationSystem\AirlineReservation\AirlineReservation\obj\Debug\AirlineReservation.UserAccounts.resources
 C:\Users\zaina\Documents\INFO 3231\AirlineReservationSystem\AirlineReservation\AirlineReservation\obj\Debug\AirlineReservation.FindFlights.resources
 C:\Users\zaina\Documents\INFO 3231\AirlineReservationSystem\AirlineReservation\AirlineReservation\obj\Debug\AirlineReservation.FlightPassengers.resources
+C:\Users\zaina\Documents\INFO 3231\AirlineReservationSystem\AirlineReservation\AirlineReservation\obj\Debug\AirlineReservation.MyFlights.resources
