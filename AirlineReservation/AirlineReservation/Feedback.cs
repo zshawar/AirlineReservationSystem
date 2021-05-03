@@ -16,5 +16,40 @@ namespace AirlineReservation
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            //Check that from is not blank when submitted
+            //first check that every box is filled
+            string feedback = textBox1.Text;
+            if (feedback == "")
+            {
+                createError.ForeColor = Color.Red;
+                createError.Text = "Please make sure all fields are valid!";
+            }
+            //otherwise data is valid
+            else
+            {
+                //adds feedback to specific user
+                int userIndex = Program.users.IndexOf(Program.currentUser);
+                Program.users[userIndex].Feedback.Add(feedback);
+
+                //clear textbox and send success message
+                createdError.ForeColor = Color.Green;
+                createdError.Text = "Success!";
+                textBox1.Text = "";
+            }
+            
+
+        }
+
+        //user dashboard
+        private void button2_Click(object sender, EventArgs e)
+        {
+            //show user dashboard
+            var userDash = new UserDash();
+            userDash.Show();
+            this.Close();
+        }
     }
 }

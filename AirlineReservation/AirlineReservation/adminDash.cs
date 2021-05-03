@@ -58,5 +58,13 @@ namespace AirlineReservation
             passenger.Show();
             this.Close();
         }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            //show user feedback form 
+            var userFeedback = new UserFeedback();
+            userFeedback.Show();
+            this.Close();
+        }
     }
 }

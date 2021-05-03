@@ -56,8 +56,8 @@ namespace AirlineReservation
                     //make sure they are the current user
                     if (Program.currentUser == passenger)
                     {
-                        //add flight number, passenger username, and passenger email to data
-                        string[] row = { created.FlightNumber, passenger.Name, passenger.Email };
+                        //add flight information
+                        string[] row = { created.FlightNumber, created.From, created.Destination, created.Price, created.Time, created.Capacity.ToString() };
                         dataGridView1.Rows.Add(row);
                     }
                     
@@ -78,6 +78,7 @@ namespace AirlineReservation
             //Check what was clicked
             //check to make sure the correct column was selected
             int col = dataGridView1.CurrentCell.ColumnIndex;
+            bool isTicket;
 
             //if its the correct column then check the capacity
             if (col == 6)
@@ -85,11 +86,10 @@ namespace AirlineReservation
                 //find what row index
                 int index = dataGridView1.CurrentCell.RowIndex;
 
-                //add one back to capacity
-                Program.flight[index].Capacity += 1;
+                
 
                 //create boolean to make sure you only remove one ticket
-                bool isTicket = false;
+                isTicket = false;
 
                 //remove the user from the flight object first
                 //loop through the flights to find the one being removed
@@ -102,8 +102,14 @@ namespace AirlineReservation
                         //remove user from flight
                         created.myPassengers.Remove(Program.currentUser);
                         //Next remove flight from user
-                        Program.currentUser.myFlight.Remove(created);
+                        //FIX THIS LATER
+                        int userIndex = Program.users.IndexOf(Program.currentUser);
+                        Program.users[userIndex].myFlight.Remove(created);
+
+                        /*Program.currentUser.myFlight.Remove(created);*/
                         //set boolean to true so no other ticket is removed
+                        //add one back to capacity
+                        Program.flight[index].Capacity += 1;
                         isTicket = true;
 
 

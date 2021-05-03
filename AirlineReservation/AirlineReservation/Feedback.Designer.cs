@@ -30,10 +30,10 @@ namespace AirlineReservation
         private void InitializeComponent()
         {
             this.button2 = new System.Windows.Forms.Button();
-            this.createError = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.createdError = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // button2
@@ -47,31 +47,24 @@ namespace AirlineReservation
             this.button2.TabIndex = 31;
             this.button2.Text = "Dashboard";
             this.button2.UseVisualStyleBackColor = false;
-            // 
-            // createError
-            // 
-            this.createError.AutoSize = true;
-            this.createError.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.createError.Location = new System.Drawing.Point(320, 397);
-            this.createError.Name = "createError";
-            this.createError.Size = new System.Drawing.Size(0, 25);
-            this.createError.TabIndex = 30;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.Orange;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.Location = new System.Drawing.Point(310, 356);
+            this.button1.Location = new System.Drawing.Point(310, 382);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(184, 66);
             this.button1.TabIndex = 29;
             this.button1.Text = "Send Feedback";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(206, 129);
+            this.textBox1.Location = new System.Drawing.Point(211, 104);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(384, 200);
@@ -88,13 +81,22 @@ namespace AirlineReservation
             this.label1.TabIndex = 16;
             this.label1.Text = "Feedback Form";
             // 
+            // createdError
+            // 
+            this.createdError.AutoSize = true;
+            this.createdError.Location = new System.Drawing.Point(255, 331);
+            this.createdError.Name = "createdError";
+            this.createdError.Size = new System.Drawing.Size(0, 30);
+            this.createdError.TabIndex = 32;
+            // 
             // Feedback
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.createdError);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.createError);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
@@ -108,9 +110,9 @@ namespace AirlineReservation
         #endregion
 
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Label createError;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label createdError;
     }
 }

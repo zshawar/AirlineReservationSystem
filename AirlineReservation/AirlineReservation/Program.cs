@@ -51,7 +51,11 @@ namespace AirlineReservation
             { get; set; }
         /*Program.users[0].myFlight.Add(new Flights("a","a","a"));*/
         // add already existing flight not ^
-        
+
+        //store user feedback
+        public ArrayList Feedback
+            { get; set; }
+
 
 
         public User(string username, string pass, string email, bool admin)
@@ -61,6 +65,7 @@ namespace AirlineReservation
             this.Email = email;
             this.Admin = admin;
             myFlight = new List<Flights>();
+            Feedback = new ArrayList();
         }
 
         // listOfFlights.Add((Flights) flight );
@@ -84,6 +89,9 @@ namespace AirlineReservation
         //use to store passengers for the flight
         public List<User> myPassengers
         { get; set; }
+
+        
+
        
         
 
@@ -101,16 +109,7 @@ namespace AirlineReservation
         }
     }
 
-    class Passengers
-    {
-        ArrayList passengers = new ArrayList();
-        public User passenger
-        { get; set; }
-        public Passengers(User passenger)
-        {
-            passengers.Add(passenger);
-        }
-    }
+    
 
 
 
