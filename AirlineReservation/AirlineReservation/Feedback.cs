@@ -24,8 +24,8 @@ namespace AirlineReservation
             string feedback = textBox1.Text;
             if (feedback == "")
             {
-                createError.ForeColor = Color.Red;
-                createError.Text = "Please make sure all fields are valid!";
+                createdError.ForeColor = Color.Red;
+                createdError.Text = "Please make sure all fields are valid!";
             }
             //otherwise data is valid
             else

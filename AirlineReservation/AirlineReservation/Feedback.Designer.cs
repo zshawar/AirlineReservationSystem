@@ -86,7 +86,7 @@ namespace AirlineReservation
             this.createdError.AutoSize = true;
             this.createdError.Location = new System.Drawing.Point(255, 331);
             this.createdError.Name = "createdError";
-            this.createdError.Size = new System.Drawing.Size(0, 30);
+            this.createdError.Size = new System.Drawing.Size(0, 20);
             this.createdError.TabIndex = 32;
             // 
             // Feedback
