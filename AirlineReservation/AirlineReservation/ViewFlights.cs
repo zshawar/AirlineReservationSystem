@@ -25,13 +25,22 @@ namespace AirlineReservation
             dataGridView1.Columns[4].Name = "Time";
             dataGridView1.Columns[5].Name = "Capacity";
 
-            //Add button column to add flights to users
+            //Add button column to delete flights to users
             DataGridViewButtonColumn btn = new DataGridViewButtonColumn();
             btn.HeaderText = "Delete Flight";
             btn.Name = "button";
             btn.Text = "Delete";
             btn.UseColumnTextForButtonValue = true;
             dataGridView1.Columns.Add(btn);
+
+            //Add button column to update flights to users
+            DataGridViewButtonColumn btn2 = new DataGridViewButtonColumn();
+            btn2.HeaderText = "Update Flight";
+            btn2.Name = "buttons";
+            btn2.Text = "Update";
+            btn2.UseColumnTextForButtonValue = true;
+            dataGridView1.Columns.Add(btn2);
+
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
         }
@@ -53,6 +62,7 @@ namespace AirlineReservation
             }
         }
 
+        //opens admin dashboard
         private void button2_Click(object sender, EventArgs e)
         {
             //show admin dashboard form
@@ -68,14 +78,12 @@ namespace AirlineReservation
             //Check what was clicked
             //check to make sure the correct column was selected
             int col = dataGridView1.CurrentCell.ColumnIndex;
+            int index = dataGridView1.CurrentCell.RowIndex;
 
-
-            //if its the correct column then check the capacity
+            //if its column 6 for delete flight
             if (col == 6)
             {
-                //find what row index
-                int index = dataGridView1.CurrentCell.RowIndex;
-
+                
                 //create boolean to check that only one item is being deleted
                 bool isTicket = true;
 
@@ -124,6 +132,36 @@ namespace AirlineReservation
                             //ticket no longer exists so cannot be used to compare, a break statement is needed to exit
                             //another way could be to temporarily store the flight being deleted so it can still be referenced after it is removed
                             break;
+
+                        }
+                    }
+                }
+            }
+
+            //check if column 7 for update flight
+            if (col == 7)
+            {
+               
+                //make sure empty row was not clicked
+                if (dataGridView1.Rows[index].Cells["Flight Number"].Value == null)
+                {
+                    //nothing should happend - this will make sure that if user clicks this the error does not stop the program
+                }
+                //correct cell was clicked
+                else
+                {
+                    //loop through flights to find which flight was clicked in the row that needs to be updated from the user and flight list
+                    foreach (Flights created in Program.flight)
+                    {
+                        if (created.FlightNumber == dataGridView1.Rows[index].Cells["Flight Number"].Value.ToString())
+                        {
+                            //store flight in variable to get sent ot updateflight form
+                            Program.updateFlight = created;
+
+                            //then open update flight form
+                            var update = new UpdateFlight();
+                            update.Show();
+                            this.Close();
 
                         }
                     }

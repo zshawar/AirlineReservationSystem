@@ -18,6 +18,7 @@ namespace AirlineReservation
         public static List<User> users = new List<User>();
         public static List<Flights> flight = new List<Flights>();
         public static User currentUser = new User("", "", "", false);
+        public static Flights updateFlight = new Flights("","","","","",0);
 
 
         /// <summary>

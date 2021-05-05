@@ -31,3 +31,4 @@ C:\Users\zaina\Documents\INFO 3231\AirlineReservationSystem\AirlineReservation\A
 C:\Users\zaina\Documents\INFO 3231\AirlineReservationSystem\AirlineReservation\AirlineReservation\obj\Debug\AirlineReservation.MyFlights.resources
 C:\Users\zaina\Documents\INFO 3231\AirlineReservationSystem\AirlineReservation\AirlineReservation\obj\Debug\AirlineReservation.Feedback.resources
 C:\Users\zaina\Documents\INFO 3231\AirlineReservationSystem\AirlineReservation\AirlineReservation\obj\Debug\AirlineReservation.UserFeedback.resources
+C:\Users\zaina\Documents\INFO 3231\AirlineReservationSystem\AirlineReservation\AirlineReservation\obj\Debug\AirlineReservation.UpdateFlight.resources

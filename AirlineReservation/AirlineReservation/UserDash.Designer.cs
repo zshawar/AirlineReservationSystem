@@ -59,7 +59,7 @@ namespace AirlineReservation
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(460, 61);
+            this.pictureBox3.Location = new System.Drawing.Point(10, 149);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(242, 139);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -69,7 +69,7 @@ namespace AirlineReservation
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(100, 256);
+            this.pictureBox2.Location = new System.Drawing.Point(545, 149);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(242, 139);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -79,7 +79,7 @@ namespace AirlineReservation
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(100, 61);
+            this.pictureBox1.Location = new System.Drawing.Point(279, 149);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(242, 139);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -91,7 +91,7 @@ namespace AirlineReservation
             this.button3.BackColor = System.Drawing.Color.Orange;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(100, 395);
+            this.button3.Location = new System.Drawing.Point(545, 288);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(242, 49);
             this.button3.TabIndex = 13;
@@ -104,7 +104,7 @@ namespace AirlineReservation
             this.button2.BackColor = System.Drawing.Color.Orange;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(460, 199);
+            this.button2.Location = new System.Drawing.Point(279, 287);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(242, 49);
             this.button2.TabIndex = 12;
@@ -117,7 +117,7 @@ namespace AirlineReservation
             this.button1.BackColor = System.Drawing.Color.Orange;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(100, 199);
+            this.button1.Location = new System.Drawing.Point(11, 287);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(242, 49);
             this.button1.TabIndex = 11;
@@ -130,7 +130,7 @@ namespace AirlineReservation
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Navy;
-            this.label1.Location = new System.Drawing.Point(241, 4);
+            this.label1.Location = new System.Drawing.Point(231, 42);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(157, 37);
             this.label1.TabIndex = 10;
@@ -140,6 +140,7 @@ namespace AirlineReservation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.pictureBox3);

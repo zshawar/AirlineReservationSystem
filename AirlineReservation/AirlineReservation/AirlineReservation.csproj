@@ -82,6 +82,12 @@
     <Compile Include="MyFlights.Designer.cs">
       <DependentUpon>MyFlights.cs</DependentUpon>
     </Compile>
+    <Compile Include="UpdateFlight.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateFlight.Designer.cs">
+      <DependentUpon>UpdateFlight.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserAccounts.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -152,6 +158,9 @@
     </Compile>
     <EmbeddedResource Include="Register.resx">
       <DependentUpon>Register.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateFlight.resx">
+      <DependentUpon>UpdateFlight.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserAccounts.resx">
       <DependentUpon>UserAccounts.cs</DependentUpon>
