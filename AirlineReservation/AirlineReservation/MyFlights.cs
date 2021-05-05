@@ -34,6 +34,9 @@ namespace AirlineReservation
             dataGridView1.Columns.Add(btn);
 
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
+            //call fill data
+            FillData();
         }
 
         //takes you to user dashboard
@@ -65,12 +68,6 @@ namespace AirlineReservation
             }
         }
 
-        //refreshs table
-        private void button1_Click(object sender, EventArgs e)
-        {
-            dataGridView1.Rows.Clear();
-            FillData();
-        }
 
         //this will allow the user to delete a flight
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -121,6 +118,8 @@ namespace AirlineReservation
 
                             //change bool to false
                             isTicket = false;
+
+                            break;
                         }
                     }
                 }
@@ -128,6 +127,13 @@ namespace AirlineReservation
                 
             }
 
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            //Update the table so capacity changes
+            dataGridView1.Rows.Clear();
+            FillData();
         }
     }
 }

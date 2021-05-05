@@ -22,13 +22,12 @@ namespace AirlineReservation
             dataGridView1.Columns[2].Name = "Email";
 
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-        }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            dataGridView1.Rows.Clear();
+            //call fill data
             FillData();
         }
+
+       
 
         private void FillData()
         {
@@ -47,6 +46,13 @@ namespace AirlineReservation
 
             //close current form
             this.Close();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            //Update the table so capacity changes
+            dataGridView1.Rows.Clear();
+            FillData();
         }
     }
 }

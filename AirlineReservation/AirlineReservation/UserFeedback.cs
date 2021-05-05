@@ -21,6 +21,9 @@ namespace AirlineReservation
             dataGridView1.Columns[1].Name = "Feedback";
 
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
+            //call fill data
+            FillData();
         }
 
         //Method that fills data to datagrid
@@ -45,13 +48,7 @@ namespace AirlineReservation
             
         }
 
-        //this is user feedback button
-        private void button1_Click(object sender, EventArgs e)
-        {
-            //refresh feedback info
-            dataGridView1.Rows.Clear();
-            FillData();
-        }
+        
 
         private void button2_Click(object sender, EventArgs e)
         {
@@ -61,6 +58,13 @@ namespace AirlineReservation
 
             //close current form
             this.Close();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            //Update the table so capacity changes
+            dataGridView1.Rows.Clear();
+            FillData();
         }
     }
 }

@@ -24,6 +24,9 @@ namespace AirlineReservation
             
 
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
+            //call fill data
+            FillData();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -36,12 +39,7 @@ namespace AirlineReservation
             this.Close();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            dataGridView1.Rows.Clear();
-            FillData();
-        }
-
+     
         //fill data method
         private void FillData()
         {
@@ -57,6 +55,13 @@ namespace AirlineReservation
                 }
                 
             }
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            //Update the table so capacity changes
+            dataGridView1.Rows.Clear();
+            FillData();
         }
     }
 }

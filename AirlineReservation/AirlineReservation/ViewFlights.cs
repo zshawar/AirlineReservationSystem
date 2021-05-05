@@ -43,14 +43,12 @@ namespace AirlineReservation
 
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            dataGridView1.Rows.Clear();
+            //call fill data
             FillData();
 
         }
+
+       
 
         //fill data method
         private void FillData()
@@ -158,18 +156,28 @@ namespace AirlineReservation
                             //store flight in variable to get sent ot updateflight form
                             Program.updateFlight = created;
 
-                            //then open update flight form
-                            var update = new UpdateFlight();
-                            update.Show();
-                            this.Close();
+                            //flight that will be updated has been found break out of loop
+                            break;
+                            
 
                         }
                     }
+
+                    //then open update flight form
+                    var update = new UpdateFlight();
+                    update.Show();
+                    this.Close();
                 }
             }
 
 
         }
 
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            //Update the table so capacity changes
+            dataGridView1.Rows.Clear();
+            FillData();
+        }
     }
 }
