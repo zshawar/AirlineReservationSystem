@@ -76,8 +76,13 @@ namespace AirlineReservation
                 //find what row index
                 int index = dataGridView1.CurrentCell.RowIndex;
 
+                //make sure empty row was not clicked
+                if(dataGridView1.Rows[index].Cells["Flight Number"].Value == null)
+                {
+                    //nothing should happend - this will make sure that if user clicks this the error does not stop the program
+                }
                 //check capacity - if no seats are available
-                if (Program.flight[index].Capacity == 0)
+                else if (Program.flight[index].Capacity == 0)
                 {
                     //Tell user the ticket cannot be added check for seats later
                     label1.ForeColor = Color.Red;

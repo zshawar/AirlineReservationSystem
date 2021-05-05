@@ -30,11 +30,9 @@ namespace AirlineReservation
                 //loop through each passenger for each flight
                 foreach (User passenger in Program.users)
                 {
+                    //stores each string in the arraylist Feedback in the variable named s
                     foreach (string s in passenger.Feedback)
                     {
-
-                        //stores feedback at this index
-                       /* string temp = passenger.Feedback[i].ToString();*/
                         //add flight information
                         string[] row = { passenger.Name, s};
                         dataGridView1.Rows.Add(row);

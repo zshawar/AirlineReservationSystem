@@ -25,6 +25,13 @@ namespace AirlineReservation
             dataGridView1.Columns[4].Name = "Time";
             dataGridView1.Columns[5].Name = "Capacity";
 
+            //Add button column to add flights to users
+            DataGridViewButtonColumn btn = new DataGridViewButtonColumn();
+            btn.HeaderText = "Delete Flight";
+            btn.Name = "button";
+            btn.Text = "Delete";
+            btn.UseColumnTextForButtonValue = true;
+            dataGridView1.Columns.Add(btn);
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
         }
@@ -33,7 +40,7 @@ namespace AirlineReservation
         {
             dataGridView1.Rows.Clear();
             FillData();
-            
+
         }
 
         //fill data method
@@ -41,7 +48,7 @@ namespace AirlineReservation
         {
             foreach (Flights created in Program.flight)
             {
-                string [] row = { created.FlightNumber, created.From, created.Destination, created.Price, created.Time, created.Capacity.ToString()};
+                string[] row = { created.FlightNumber, created.From, created.Destination, created.Price, created.Time, created.Capacity.ToString() };
                 dataGridView1.Rows.Add(row);
             }
         }
@@ -55,5 +62,76 @@ namespace AirlineReservation
             //close current form
             this.Close();
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            //Check what was clicked
+            //check to make sure the correct column was selected
+            int col = dataGridView1.CurrentCell.ColumnIndex;
+
+
+            //if its the correct column then check the capacity
+            if (col == 6)
+            {
+                //find what row index
+                int index = dataGridView1.CurrentCell.RowIndex;
+
+                //create boolean to check that only one item is being deleted
+                bool isTicket = true;
+
+                //make sure empty row was not clicked
+                if (dataGridView1.Rows[index].Cells["Flight Number"].Value == null)
+                {
+                    //nothing should happend - this will make sure that if user clicks this the error does not stop the program
+                }
+                //correct cell was clicked
+                else
+                {
+                    //loop through flights to find which flight was clicked in the row that needs to be removed from the user and flight list
+                    foreach (Flights created in Program.flight)
+                    {
+                        if (created.FlightNumber == dataGridView1.Rows[index].Cells["Flight Number"].Value.ToString() && isTicket)
+                        {
+                            //loop through user lists and remove all flight occurrences
+                            foreach (User added in Program.users)
+                            {
+                               
+                                //loop throught the users flights and remove occurrences of the flight being deleted
+                                for(int i = 0; i<added.myFlight.Count; i++)
+                                {
+                                    if (added.myFlight[i] == created)
+                                    {
+                                        added.myFlight.Remove(created);
+                                        --i;
+                                    }
+                                }
+                            }
+
+                            //then remove the flight from flight list
+                            Program.flight.Remove(created);
+
+                            //Tell user the ticket was deleted
+                            label1.ForeColor = Color.Red;
+                            label1.Text = "Ticket for " + created.FlightNumber + " was deleted!";
+
+                            //Update the table so capacity changes
+                            dataGridView1.Rows.Clear();
+                            FillData();
+
+                            //change boolean to false
+                            isTicket = false;
+                            
+                            //ticket no longer exists so cannot be used to compare, a break statement is needed to exit
+                            //another way could be to temporarily store the flight being deleted so it can still be referenced after it is removed
+                            break;
+
+                        }
+                    }
+                }
+            }
+
+
+        }
+
     }
 }

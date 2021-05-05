@@ -78,7 +78,7 @@ namespace AirlineReservation
             //Check what was clicked
             //check to make sure the correct column was selected
             int col = dataGridView1.CurrentCell.ColumnIndex;
-            bool isTicket;
+           
 
             //if its the correct column then check the capacity
             if (col == 6)
@@ -86,44 +86,46 @@ namespace AirlineReservation
                 //find what row index
                 int index = dataGridView1.CurrentCell.RowIndex;
 
-                
+                //create boolean to check that only one item is being deleted
+                bool isTicket = true;
 
-                //create boolean to make sure you only remove one ticket
-                isTicket = false;
-
-                //remove the user from the flight object first
-                //loop through the flights to find the one being removed
-                foreach (Flights created in Program.flight)
+                //make sure empty row was not clicked
+                if (dataGridView1.Rows[index].Cells["Flight Number"].Value == null)
                 {
-                    //if the flight being removed matches the one in the flight list and boolean is false
-                    if(created == Program.flight[index] && isTicket == false)
-                    {
-
-                        //remove user from flight
-                        created.myPassengers.Remove(Program.currentUser);
-                        //Next remove flight from user
-                        //FIX THIS LATER
-                        int userIndex = Program.users.IndexOf(Program.currentUser);
-                        Program.users[userIndex].myFlight.Remove(created);
-
-                        /*Program.currentUser.myFlight.Remove(created);*/
-                        //set boolean to true so no other ticket is removed
-                        //add one back to capacity
-                        Program.flight[index].Capacity += 1;
-                        isTicket = true;
-
-
-                    }
-
+                    //nothing should happend - this will make sure that if user clicks this the error does not stop the program
                 }
+                //correct cell was clicked
+                else
+                {
+                    //loop through flights to find which flight was clicked in the row that needs to be removed from the user and flight list
+                    foreach (Flights created in Program.flight)
+                    {
+                        if (created.FlightNumber == dataGridView1.Rows[index].Cells["Flight Number"].Value.ToString() && isTicket)
+                        {
+                            //add one to capacity
+                            created.Capacity += 1;
+                            //remove user from flight
+                            created.myPassengers.Remove(Program.currentUser);
 
-                //Tell user the ticket was deleted
-                label1.ForeColor = Color.Red;
-                label1.Text = "Ticket for " + Program.flight[index].FlightNumber + " was deleted!";
+                            //remove flight from user
+                            int userIndex = Program.users.IndexOf(Program.currentUser);
+                            Program.users[userIndex].myFlight.Remove(created);
 
-                //Update the table so capacity changes
-                dataGridView1.Rows.Clear();
-                FillData();
+                            //Tell user the ticket was deleted
+                            label1.ForeColor = Color.Red;
+                            label1.Text = "Ticket for " + created.FlightNumber + " was deleted!";
+
+                            //Update the table so capacity changes
+                            dataGridView1.Rows.Clear();
+                            FillData();
+
+                            //change bool to false
+                            isTicket = false;
+                        }
+                    }
+                }
+                
+                
             }
 
         }
