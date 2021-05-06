@@ -54,7 +54,7 @@ namespace AirlineReservation
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(17, 118);
+            this.dataGridView1.Location = new System.Drawing.Point(17, 98);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 28;
@@ -66,7 +66,7 @@ namespace AirlineReservation
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Navy;
-            this.label1.Location = new System.Drawing.Point(270, 59);
+            this.label1.Location = new System.Drawing.Point(270, 39);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(219, 32);
             this.label1.TabIndex = 24;
@@ -75,7 +75,7 @@ namespace AirlineReservation
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(492, 41);
+            this.pictureBox1.Location = new System.Drawing.Point(492, 21);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(110, 69);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;

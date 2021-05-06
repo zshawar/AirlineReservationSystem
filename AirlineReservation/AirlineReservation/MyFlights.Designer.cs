@@ -45,7 +45,7 @@ namespace AirlineReservation
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(249, 420);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(0, 38);
+            this.label1.Size = new System.Drawing.Size(0, 25);
             this.label1.TabIndex = 24;
             // 
             // button2
@@ -64,7 +64,7 @@ namespace AirlineReservation
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(19, 108);
+            this.dataGridView1.Location = new System.Drawing.Point(19, 86);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 28;
@@ -77,7 +77,7 @@ namespace AirlineReservation
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Navy;
-            this.label2.Location = new System.Drawing.Point(288, 54);
+            this.label2.Location = new System.Drawing.Point(288, 32);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(154, 32);
             this.label2.TabIndex = 25;
@@ -86,7 +86,7 @@ namespace AirlineReservation
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(450, 35);
+            this.pictureBox1.Location = new System.Drawing.Point(450, 13);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(110, 69);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
