@@ -38,6 +38,7 @@ namespace AirlineReservation
             this.incorrectPass = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // label2
@@ -97,6 +98,7 @@ namespace AirlineReservation
             // incorrectUser
             // 
             this.incorrectUser.AutoSize = true;
+            this.incorrectUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.incorrectUser.ForeColor = System.Drawing.Color.Red;
             this.incorrectUser.Location = new System.Drawing.Point(274, 211);
             this.incorrectUser.Name = "incorrectUser";
@@ -135,12 +137,24 @@ namespace AirlineReservation
             this.label4.TabIndex = 14;
             this.label4.Text = "Login Below:";
             // 
+            // checkBox2
+            // 
+            this.checkBox2.ForeColor = System.Drawing.Color.Navy;
+            this.checkBox2.Location = new System.Drawing.Point(540, 281);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(92, 25);
+            this.checkBox2.TabIndex = 17;
+            this.checkBox2.Text = "show";
+            this.checkBox2.UseVisualStyleBackColor = true;
+            this.checkBox2.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.checkBox2);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.incorrectPass);
@@ -169,5 +183,6 @@ namespace AirlineReservation
         private System.Windows.Forms.Label incorrectPass;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.CheckBox checkBox2;
     }
 }

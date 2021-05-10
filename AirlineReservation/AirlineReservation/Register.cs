@@ -15,11 +15,13 @@ namespace AirlineReservation
     
     public partial class Register : Form
     {
-        /*public List<User> accounts = new List<User>();*/
+      
         public Register()
         {
-            /*Program.users = new List<User>();*/
             InitializeComponent();
+
+            //hide password
+            password.UseSystemPasswordChar = true;
             
             
 
@@ -68,6 +70,23 @@ namespace AirlineReservation
         {
             var Login = new Login();
             Login.Show();
+        }
+
+
+        //shows and hides password
+        private void checkBox2_CheckedChanged(object sender, EventArgs e)
+        {
+            //check if the checkbox is checked or not
+            if (checkBox2.Checked)
+            {
+                //if it is - show password
+                password.UseSystemPasswordChar = false;
+
+            }
+            else
+            {
+                password.UseSystemPasswordChar = true;
+            }
         }
     }
 

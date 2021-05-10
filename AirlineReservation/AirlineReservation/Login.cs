@@ -15,18 +15,13 @@ namespace AirlineReservation
 {
     public partial class Login : Form
     {
-        /*List<User> loginUsers = new List<User>();
-        public void SetAllPeople(List<User> registered)
-        {
-            foreach (User s in registered)
-            {
-                loginUsers.Add(s);
-            }
-        }*/
         
         public Login()
         {
             InitializeComponent();
+
+            //hide password
+            password.UseSystemPasswordChar = true;
         }
 
         private void loginButton_Click(object sender, EventArgs e)
@@ -116,6 +111,21 @@ namespace AirlineReservation
             //otherwise it was nothing was correct and return false for both
             return new bool[] { false, false };
 
+        }
+
+        private void checkBox2_CheckedChanged(object sender, EventArgs e)
+        {
+            //check if the checkbox is checked or not
+            if (checkBox2.Checked)
+            {
+                //if it is - show password
+                password.UseSystemPasswordChar = false;
+
+            }
+            else
+            {
+                password.UseSystemPasswordChar = true;
+            }
         }
     }
 
